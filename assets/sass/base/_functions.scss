@@ -1,0 +1,43 @@
+/*
+
+Functions
+==============
+
+Some functions
+
+*/
+
+// Function to replace pixels with rems
+@function rem($target) {
+	@if $target == 0 { @return 0 }
+	@return $target / $base-font-size + 0rem;
+}
+
+// Function to replace pixels with ems
+@function em($target, $context: $base-font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}
+
+@function add-prefix($images, $vendor: false) {
+  $images-prefixed: ();
+
+  @for $i from 1 through length($images) {
+    $type: type-of(nth($images, $i)); // Get type of variable - List or String
+
+    // If variable is a list - Gradient
+    @if $type == list {
+      $gradient-type: nth(nth($images, $i), 1); // Get type of gradient (linear || radial)
+      $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
+
+      $gradient: render-gradients($gradient-args, $gradient-type, $vendor);
+      $images-prefixed: append($images-prefixed, $gradient, comma);
+    }
+
+    // If variable is a string - Image
+    @else if $type == string {
+      $images-prefixed: join($images-prefixed, nth($images, $i), comma);
+    }
+  }
+  @return $images-prefixed;
+}

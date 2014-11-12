@@ -1,0 +1,31 @@
+/*
+
+Links
+==============
+
+<a href="">this is a link</a>
+<a class="is-selected" href="">this link is selected</a>
+
+*/
+
+a {
+	text-decoration: none;
+	&:link {
+		color: $link-color;
+	}
+	&:visited {
+
+	}
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+	}
+	&:active {
+
+	}
+}
+
+.is-selected {
+
+}
+

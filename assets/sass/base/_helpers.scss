@@ -1,0 +1,89 @@
+/*
+
+Helpers
+==============
+
+Some helper placeholder rules, include like
+
+body {
+	@extend %placeholder;
+}
+
+*/
+
+// inline-block
+%inline-block {
+	display: inline-block;
+	.lt-ie9 & {
+		zoom: 1;
+		*display: inline;
+	}
+}
+
+// Center-align a block level element
+%center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Image Replacement
+%ir {
+	color: transparent;
+	font: 0/0 a;
+	text-shadow: none;
+}
+
+// hide from everything
+%hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+%visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+%invisible {
+	visibility: hidden;
+}
+
+// Zero Stuff
+%zero {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+%zero-list {
+	@extend %zero;
+	list-style: none;
+}
+%zero-focus {
+	outline: 0;
+	border: 0;
+// 	@include box-shadow(none);
+}
+
+
+
+// remove margin from nested lists
+li > ul,
+li > ol {
+	margin-bottom:0;
+}

@@ -1,0 +1,67 @@
+/*
+
+Misc
+==============
+
+<p><strong>rendered as bold text</strong></p>
+
+<p><em>rendered as italic text</em></p>
+
+<p><del>rendered as deleted text</del></p>
+
+<p><dfn>defines a definition term</dfn></p>
+
+<p><abbr title="extended abbr text should show when mouse over">&lt;abbr&gt; abbr - extended text when mouseover.</abbr></p>
+<p><acronym title="extended acronym text should show when mouse over">&lt;acronym&gt; acronym - extended text when mouseover.</acronym></p>
+
+<address>This would be rendered the address</address>
+
+<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+
+*/
+
+strong {
+	font-weight: $bold;
+}
+
+em {
+	font-style: italic;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+dfn {
+
+}
+
+// - Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+acronym {
+	cursor: help;
+	border-bottom: 1px dotted $abbr-border-color;
+}
+
+address {
+	@include font-size($base-font-size, $line-height: true, $margin-bottom: true);
+}
+
+small,
+.small  { @include font-size($font-size-small, $line-height: true, $margin-bottom: true); }
+cite    { font-style: normal; }
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }

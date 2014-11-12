@@ -1,0 +1,48 @@
+/*
+
+Definition lists
+==============
+
+<dl>
+	<dt>Term</dt>
+	<dd>Description</dd>
+	<dt>Term</dt>
+	<dd>Description</dd>
+</dl>
+
+*/
+
+dl {
+	margin-top: 0; // Remove browser default
+	margin-bottom: rem($rhythm-unit);
+}
+dt,
+dd {
+	@include font-size($base-font-size, $line-height: true, $margin-bottom: true);
+}
+dt {
+	font-weight: $bold;
+}
+dd {
+	margin-left: 0; // Undo browser default
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+@include gs-media(t,min) {
+	.dl-horizontal {
+		dt {
+			float: left;
+			width: ($component-offset-horizontal - 20);
+			clear: left;
+			text-align: right;
+			@include text-overflow();
+		}
+		dd {
+			margin-left: $component-offset-horizontal;
+			@include clear(false);
+		}
+	}
+}

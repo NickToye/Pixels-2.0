@@ -1,0 +1,33 @@
+/*
+
+Article
+==============
+
+<article>
+	<header>...</header>
+	<section class="panel">
+		<header class="panel__heading">...</header>
+		<div class="panel__body">...</div>
+	</section>
+</article>
+
+*/
+
+article {
+	@include gs-span(m,all);
+	margin-bottom: rem($base-line-height)*2;
+	> header {
+
+		@include grid-mb(d,1,10);
+		padding: rem($rhythm-unit) 0 0 0;
+	}
+	.panel {
+		&__heading {
+			background: $charcoal;
+		}
+		&__body {
+			border: none;
+		}
+	}
+
+}

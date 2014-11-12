@@ -1,0 +1,38 @@
+/*
+
+Body copy
+==============
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ligula non felis fermentum tincidunt. Suspendisse sapien odio, vestibulum euismod metus at, aliquet dapibus purus. Suspendisse lacinia sit amet ante eget gravida.</p>
+
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ligula non felis fermentum tincidunt. Suspendisse sapien odio, vestibulum euismod metus at, aliquet dapibus purus. Suspendisse lacinia sit amet ante eget gravida.</p>
+
+*/
+
+p {
+	font: {
+		family: $base-font-family;
+		weight: $normal;
+	}
+	@include font-size($p,true,true);
+	// font families
+	&.base-font-family-serif { font-family: $base-font-family-serif; }
+	&.base-font-family-condensed { font-family: $base-font-family-condensed; }
+	&.base-font-family-code { font-family: $base-font-family-code; }
+	&.base-font-family-amp { font-family: $base-font-family-amp;  font-style: italic; }
+	// font weights
+	&.light { font-weight: $light; }
+	&.semi-bold { font-weight: $semi-bold; }
+	&.bold { font-weight: $bold; }
+	&.extra-bold { font-weight: $extra-bold; }
+}
+
+/* --- used if wanting to style the first paragraph slightly differently --- */
+.lead {
+
+}
+
+::-moz-selection, ::selection {
+	background-color: $body-background-color;
+	color: $white; // check this
+}

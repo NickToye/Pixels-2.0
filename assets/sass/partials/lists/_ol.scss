@@ -1,0 +1,38 @@
+/*
+
+Ordered lists
+==============
+
+<ol>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>
+		<ol>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+		</ol>
+	</li>
+</ol>
+
+*/
+
+ol {
+	@extend %zero-list;
+	margin-bottom: rem($rhythm-unit);
+}
+
+ol > li {
+
+}
+
+ol ol {
+
+}
+
+ol ol li {
+
+}

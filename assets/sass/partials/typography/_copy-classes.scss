@@ -1,0 +1,49 @@
+/*
+
+Copy classes
+==============
+
+<p class="text-muted">faded out a little</p>
+<p class="text-primary">this really is something to look at</p>
+<p class="text-success">winner, winner. chicken dinner!</p>
+<p class="text-info">just a bit of info</p>
+<p class="text-warning">be careful now, take heed</p>
+<p class="text-danger">ooh, high voltage</p>
+
+*/
+
+// TODO: Apply some BEM
+
+.text-muted {
+	color: $muted-color;
+}
+
+.text-primary {
+	color: $brand-primary;
+}
+
+.text-success {
+	color: $success-color;
+}
+
+.text-info {
+	color: $info-color;
+}
+
+.text-warning {
+	color: $warning-color;
+}
+
+.text-danger {
+	color: $danger-color;
+}
+
+@include bg-variant('.bg-primary', $brand-primary,$white,white);
+
+@include bg-variant('.bg-success', $state-success-background-color,$state-success-text-color);
+
+@include bg-variant('.bg-info', $state-info-background-color,$state-info-text-color);
+
+@include bg-variant('.bg-warning', $state-warning-background-color,$state-warning-text-color);
+
+@include bg-variant('.bg-danger', $state-danger-background-color,$state-danger-text-color);

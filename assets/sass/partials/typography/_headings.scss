@@ -1,0 +1,55 @@
+/*
+
+Headings
+==============
+
+<h1>This is the primary headline</h1>
+<h2>This is the secondary headline</h2>
+<h3>This is the tertiary headline</h3>
+<h4>This is the average headline</h4>
+<h5>This is the small headline</h5>
+<h6>This is the micro headline</h6>
+
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $base-font-family-headings;
+	small {
+		font: {
+			weight: $normal;
+			family: $base-font-family;
+		}
+	}
+}
+
+h1,  .h1 {
+	@include font-size($h1,true,true);
+	text-shadow: 0 1px rgba($white,.4);
+	color: $brand-primary;
+}
+
+h2, .h2 {
+	@include font-size($h2,true,true);
+	color: $brand-secondary;
+}
+
+h3, .h3 {
+	@include font-size($h3, true, true);
+	font-family: $base-font-family;
+	color: $brand-tertiary;
+}
+
+h4, .h4 {
+	@include font-size($h4,true, true);
+	font-family: $base-font-family;
+}
+
+h5, .h5 {
+	@include font-size($h5, true, true);
+	font-family: $base-font-family;
+}
+
+h6, .h6 {
+	@include font-size($h6, true, true);
+	font-family: $base-font-family;
+}

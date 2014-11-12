@@ -1,0 +1,1887 @@
+/*
+
+Styles
+==============
+
+Importing styles
+
+*/
+/*
+
+Functions
+==============
+
+Some functions
+
+*/
+/*
+
+Mixins
+==============
+
+Library of useful mixins
+
+*/
+.wrapper:after, .jumbotron:after, .panel__body:after, .panel .sub-section:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+/*
+
+Mixin :: Animations
+==============
+
+*/
+/*
+
+Mixin :: Backface Visibility
+==============
+
+Prevent browsers from flickering when using CSS 3D transforms
+Default value is 'visible', but can be changed to 'hidden'
+
+*/
+/*
+
+Mixin :: Background Clip
+==============
+
+*/
+/*
+
+Mixin :: Border Radius
+==============
+
+*/
+/*
+
+Mixin :: Box Shadow
+==============
+
+*/
+/*
+
+Mixin :: Box Sizing
+==============
+
+*/
+/*
+
+Mixin :: Buttons
+==============
+
+*/
+/* - BASE ----------------------------- */
+/* - SIZES ---------------------------- */
+/* - FONT SIZES ----------------------- */
+/* - FUNCTIONS ------------------------ */
+/* - STYLES --------------------------- */
+/*
+
+Mixin :: Colors
+==============
+
+*/
+/*
+
+Mixin :: Components
+==============
+
+*/
+/*
+
+Mixin :: CSS3
+==============
+
+*/
+/*
+
+Mixin :: Forms
+==============
+
+*/
+/*
+
+Mixin :: Images
+==============
+
+*/
+/*
+
+Mixin :: Layout
+==============
+
+*/
+/*
+
+Mixin :: Lists
+==============
+
+*/
+/*
+
+Mixin :: Misc
+==============
+
+*/
+/*
+
+Mixin :: Shapes
+==============
+
+*/
+/*
+
+Mixin :: Tables
+==============
+
+*/
+/*
+
+Mixin :: Texture
+==============
+
+*/
+/*
+
+Mixin :: Transformations
+===================
+
+*/
+/*
+
+Mixin :: Transition
+==============
+
+*/
+/*
+
+Mixin :: Typography
+===============
+
+*/
+/*
+
+Fonts
+==============
+
+Setting up some basic font stacks
+
+*/
+/*
+
+Variables
+==============
+
+Setting variables
+
+*/
+/*
+
+A. BASICS
+	A1. Page Setup
+		- Page Dimensions
+		- Rhythm
+		- Gutters
+		- Media Queries
+
+	A2. Atmosphere
+		- Black & Whites
+		- Neutral Colours
+		- Scaffolding
+		- Branding
+		- Headings
+		- Social Media Branding
+		- Hyperlinks
+		- Blockquotes
+		- Misc
+
+	A3. Typography
+		- Typefaces
+		- Sizes
+		- Weights
+		- Iconography
+
+B. COMPONENTS
+	B1. Base Components
+		- Borders
+	B2. Component Animations
+	B3. Alerts
+	B4. Badges
+	B5. Breadcrumbs
+	B6. Button Groups
+	B7. Buttons
+	B8. Carousel
+	B9. Close
+	B10. Code
+	B11. Dropdowns
+	B12. Forms
+	B13. Jumbotron
+	B14. Labels
+	B15. List Group
+	B16. Media
+	B17. Modals
+	B18. Navbar
+	B19. Navs
+	B20. Pagination
+	B21. Panels
+	B22. Popovers
+	B23. Progress Bars
+	B24. Tables
+	B25. Thumbnails/Figures
+	B26. Tooltip
+	B27. Wells
+*/
+/*
+
+Reset, Bizarro style
+==============
+
+El Captain Bizarro CSS Reset
+
+*/
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+body {
+  margin: 0; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+hgroup, ul, ol, dd, menu, dl, figure, pre, table, fieldset, legend, hr,
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  padding: 0; }
+
+b, strong {
+  font-weight: bold; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  min-height: auto;
+  vertical-align: middle; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+figure > img {
+  display: block; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button,
+input {
+  line-height: normal; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.chromeframe {
+  background: #ccc;
+  color: #000;
+  margin: 0.2em 0;
+  padding: 0.2em 0; }
+
+/*
+
+Helpers
+==============
+
+Some helper placeholder rules, include like
+
+body {
+	@extend %placeholder;
+}
+
+*/
+ul, ol, .bg-primary p, .bg-success p, .bg-info p, .bg-warning p, .bg-danger p, .panel .sub-section:last-of-type {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul, ol {
+  list-style: none; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/*
+	<img alt="" class="img-rounded" src="http://fillmurray.com/300/300" />
+	<img alt="" class="img-circle" src="http://fillmurray.com/300/300" />
+	<img alt="" class="img-polaroid" src="http://fillmurray.com/300/300" />
+*/
+.img-rounded {
+  border-radius: 4px; }
+
+.img-circle {
+  border-radius: 50%; }
+
+.img-polaroid {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  padding: 12px; }
+
+/*
+
+Base64 Images
+==============
+
+This file is to include placeholder selectors just for Base64 images
+
+*/
+/*
+
+Figure & Figcaption
+===================
+
+<figure>
+	<img alt="" src="img/tmp/rock-hammer-1.jpg">
+	<figcaption>Figure caption</figcaption>
+</figure>
+
+*/
+/*
+
+Colors
+==============
+
+This is for a color-swatch, requires Compass at the moment.
+
+<ul class="swatch theme-colors">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+*/
+.swatch {
+  clear: both;
+  float: left;
+  max-width: 640px; }
+  .swatch li {
+    border: 1px solid black;
+    float: left;
+    height: 5em;
+    list-style: none;
+    margin: 0 0 0 0;
+    width: 5em; }
+
+.theme-colors li {
+  background-color: #ca6253; }
+  .theme-colors li:nth-child(2) {
+    background-color: #5a7c7f; }
+  .theme-colors li:nth-child(3) {
+    background-color: #4c5b80; }
+  .theme-colors li:nth-child(4) {
+    background-color: #53bbca; }
+  .theme-colors li:nth-child(5) {
+    background-color: #7f5d5a; }
+  .theme-colors li:nth-child(6) {
+    clear: both;
+    background-color: white; }
+  .theme-colors li:nth-child(7) {
+    background-color: black; }
+
+/*
+
+Base
+==============
+
+HTML, BODY, #wrapper styles
+
+*/
+body {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzJGQzE4MUI0NUJBMTFFNEI1NDI4Mjk4OTREMDBDODUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzJGQzE4MUM0NUJBMTFFNEI1NDI4Mjk4OTREMDBDODUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxN0NCOTg2MjQ1QkExMUU0QjU0MjgyOTg5NEQwMEM4NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3MkZDMTgxQTQ1QkExMUU0QjU0MjgyOTg5NEQwMEM4NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvY/pYIAAA+7SURBVFjD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);
+  min-width: 260px;
+  overflow-x: hidden;
+  width: 100%; }
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/*
+
+Header
+==============
+
+Styles for the header element
+
+*/
+header[role='banner'] {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0;
+  width: 100%; }
+
+/*
+
+Main
+==============
+
+Styles for the main element
+
+*/
+/*
+
+Aside
+==============
+
+Styles for the aside element
+
+*/
+/*
+
+Footer
+==============
+
+Styles for the footer element
+
+*/
+/*
+
+Article
+==============
+
+<article>
+	<header>...</header>
+	<section class="panel">
+		<header class="panel__heading">...</header>
+		<div class="panel__body">...</div>
+	</section>
+</article>
+
+*/
+article {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 3rem; }
+  article > header {
+    margin-bottom: 3.23887%;
+    padding: 0.75rem 0 0 0; }
+  article .panel__heading {
+    background: #3d3d3d; }
+  article .panel__body {
+    border: none; }
+
+/*
+
+Headings
+==============
+
+<h1>This is the primary headline</h1>
+<h2>This is the secondary headline</h2>
+<h3>This is the tertiary headline</h3>
+<h4>This is the average headline</h4>
+<h5>This is the small headline</h5>
+<h6>This is the micro headline</h6>
+
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: 400;
+    font-family: "museo", sans-serif; }
+
+h1, .h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+  color: #ca6253; }
+
+h2, .h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  color: #5a7c7f; }
+
+h3, .h3 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  font-family: "museo", sans-serif;
+  color: #4c5b80; }
+
+h4, .h4 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  margin-bottom: 0.75rem;
+  font-family: "museo", sans-serif; }
+
+h5, .h5 {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  font-family: "museo", sans-serif; }
+
+h6, .h6 {
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  font-family: "museo", sans-serif; }
+
+/*
+
+Body copy
+==============
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ligula non felis fermentum tincidunt. Suspendisse sapien odio, vestibulum euismod metus at, aliquet dapibus purus. Suspendisse lacinia sit amet ante eget gravida.</p>
+
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ligula non felis fermentum tincidunt. Suspendisse sapien odio, vestibulum euismod metus at, aliquet dapibus purus. Suspendisse lacinia sit amet ante eget gravida.</p>
+
+*/
+p {
+  font-family: "museo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem; }
+  p.base-font-family-serif {
+    font-family: Georgia, "Times New Roman", Times, serif; }
+  p.base-font-family-condensed {
+    font-family: "proxima-nova-alt-condensed", sans-serif; }
+  p.base-font-family-code {
+    font-family: "Source Sans Pro", Monaco, "Courier New", monospace; }
+  p.base-font-family-amp {
+    font-family: Baskerville, Georgia, Garamond, "Palatino", "Book Antiqua";
+    font-style: italic; }
+  p.light {
+    font-weight: 300; }
+  p.semi-bold {
+    font-weight: 600; }
+  p.bold {
+    font-weight: 700; }
+  p.extra-bold {
+    font-weight: 800; }
+
+/* --- used if wanting to style the first paragraph slightly differently --- */
+::-moz-selection, ::-moz-selection {
+  background-color: #d0c3b0;
+  color: white; }
+::-moz-selection, ::selection {
+  background-color: #d0c3b0;
+  color: white; }
+
+/*
+
+Copy classes
+==============
+
+<p class="text-muted">faded out a little</p>
+<p class="text-primary">this really is something to look at</p>
+<p class="text-success">winner, winner. chicken dinner!</p>
+<p class="text-info">just a bit of info</p>
+<p class="text-warning">be careful now, take heed</p>
+<p class="text-danger">ooh, high voltage</p>
+
+*/
+.text-muted {
+  color: #999999; }
+
+.text-primary {
+  color: #ca6253; }
+
+.text-success {
+  color: #5cb85c; }
+
+.text-info {
+  color: #5bc0de; }
+
+.text-warning {
+  color: #f0ad4e; }
+
+.text-danger {
+  color: #d9534f; }
+
+.bg-primary {
+  background-color: #ca6253;
+  padding: 0.75rem;
+  color: white; }
+
+a.bg-primary:hover {
+  background-color: #b34737; }
+
+.bg-success {
+  background-color: #5cb85c;
+  padding: 0.75rem;
+  color: #224323; }
+
+a.bg-success:hover {
+  background-color: #449d44; }
+
+.bg-info {
+  background-color: #5bc0de;
+  padding: 0.75rem;
+  color: #1d4356; }
+
+a.bg-info:hover {
+  background-color: #31b0d5; }
+
+.bg-warning {
+  background-color: #f0ad4e;
+  padding: 0.75rem;
+  color: #544324; }
+
+a.bg-warning:hover {
+  background-color: #ec971f; }
+
+.bg-danger {
+  background-color: #d9534f;
+  padding: 0.75rem;
+  color: #722e2d; }
+
+a.bg-danger:hover {
+  background-color: #c9302c; }
+
+/*
+
+Links
+==============
+
+<a href="">this is a link</a>
+<a class="is-selected" href="">this link is selected</a>
+
+*/
+a {
+  text-decoration: none; }
+  a:link {
+    color: #ca6253; }
+  a:hover, a:focus {
+    color: #9f3f31; }
+
+/*
+
+Blockquote
+==============
+
+<blockquote>
+	<p>You can put a cat in an oven, but that don't make it a biscuit.</p>
+</blockquote>
+
+*/
+blockquote {
+  padding: 0.75rem;
+  margin: 0 0 0.75rem;
+  font-size: 20;
+  border-left: 5px solid #dddddd; }
+  blockquote p,
+  blockquote ul,
+  blockquote ol {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem; }
+  blockquote cite {
+    display: block;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: #ca6253; }
+    blockquote cite:before {
+      content: '\2014 \00A0'; }
+
+/*
+
+Misc
+==============
+
+<p><strong>rendered as bold text</strong></p>
+
+<p><em>rendered as italic text</em></p>
+
+<p><del>rendered as deleted text</del></p>
+
+<p><dfn>defines a definition term</dfn></p>
+
+<p><abbr title="extended abbr text should show when mouse over">&lt;abbr&gt; abbr - extended text when mouseover.</abbr></p>
+<p><acronym title="extended acronym text should show when mouse over">&lt;acronym&gt; acronym - extended text when mouseover.</acronym></p>
+
+<address>This would be rendered the address</address>
+
+<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+
+*/
+strong {
+  font-weight: 700; }
+
+em {
+  font-style: italic; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999; }
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase; }
+
+acronym {
+  cursor: help;
+  border-bottom: 1px dotted #999999; }
+
+address {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem; }
+
+small,
+.small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin-bottom: 0.75rem; }
+
+cite {
+  font-style: normal; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+/*
+
+Code
+==============
+
+<pre>This is a pre tag rendered</pre>
+
+<code>This is a code tag rendered</code>
+
+<pre><code>This is a code tag in a pre tag rendered</code></pre>
+
+*/
+code,
+kbd,
+pre,
+samp {
+  font-family: "Source Sans Pro", Monaco, "Courier New", monospace; }
+
+code {
+  padding: 2px 4px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  color: #5a7c7f;
+  background-color: #e9efef;
+  white-space: nowrap;
+  border-radius: 5px; }
+
+kbd {
+  padding: 2px 4px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  color: white;
+  background-color: #5a7c7f;
+  border-radius: 3.33333px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+pre {
+  display: block;
+  padding: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  margin-bottom: 0.75rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #5a7c7f;
+  background-color: #e9efef;
+  border: 1px solid #dae5e4;
+  border-radius: 5px; }
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0; }
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll; }
+
+/*
+
+Scoped
+==============
+
+<div class="prose">
+	<h1>This is the primary headline</h1>
+	<h2>This is the secondary headline</h2>
+	<h3>This is the tertiary headline</h3>
+	<h4>This is the average headline</h4>
+	<h5>This is the small headline</h5>
+	<h6>This is the micro headline</h6>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ligula non felis fermentum tincidunt. Suspendisse sapien odio, vestibulum euismod metus at, aliquet dapibus purus. Suspendisse lacinia sit amet ante eget gravida.</p>
+
+	<a href="">A link to something</a>
+
+	<ul>
+		<li>A list item</li>
+		<li>A list item</li>
+		<li>A list item</li>
+	</ul>
+</div>
+
+*/
+.prose h1 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+.prose h2 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+.prose h3 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+.prose h4 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+.prose h5 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+.prose h6 {
+  font-family: "alternate-gothic-no-2-d", sans-serif; }
+.prose p {
+  font-family: "museo", sans-serif; }
+.prose a {
+  font-family: "museo", sans-serif; }
+.prose li {
+  font-family: "museo", sans-serif; }
+
+/*
+
+Unordered lists
+==============
+
+<ul>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>
+		<ul>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+		</ul>
+	</li>
+</ul>
+
+*/
+ul {
+  margin-bottom: 0.75rem; }
+  ul.list-inline li {
+    display: inline; }
+
+/*
+
+Ordered lists
+==============
+
+<ol>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>An unordered list item</li>
+	<li>
+		<ol>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+			<li>An unordered list item</li>
+		</ol>
+	</li>
+</ol>
+
+*/
+ol {
+  margin-bottom: 0.75rem; }
+
+/*
+
+Definition lists
+==============
+
+<dl>
+	<dt>Term</dt>
+	<dd>Description</dd>
+	<dt>Term</dt>
+	<dd>Description</dd>
+</dl>
+
+*/
+dl {
+  margin-top: 0;
+  margin-bottom: 0.75rem; }
+
+dt,
+dd {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem; }
+
+dt {
+  font-weight: 700; }
+
+dd {
+  margin-left: 0; }
+
+@media only screen and (min-width: 769px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .dl-horizontal dd {
+    margin-left: 180px; }
+    .dl-horizontal dd:after {
+      content: '';
+      display: table;
+      clear: both; } }
+/*
+
+Navigation
+==============
+
+<nav class="main-nav" role="navigation">
+	<ul class="main-nav-list">
+		<li class="main-nav-item"><a class="main-nav-link" href="">A main link</a></li>
+		<li class="main-nav-item"><a class="main-nav-link" href="">A main link</a></li>
+		<li class="main-nav-item"><a class="main-nav-link" href="">A main link</a></li>
+		<li class="main-nav-item"><a class="main-nav-link" href="">A main link</a></li>
+	</ul>
+</nav>
+
+*/
+.skipnav {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+/*
+
+Pagination
+==============
+
+<ul class="pagination">
+	<li><a href="#">&laquo;</a></li>
+	<li><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">4</a></li>
+	<li><a href="#">5</a></li>
+	<li><a href="#">&raquo;</a></li>
+</ul>
+
+*/
+/*
+
+Breadcrumbs
+==============
+
+<ol class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Categories</a></li>
+	<li class="active">Animals</li>
+</ol>
+
+*/
+/*
+
+Alerts
+==============
+
+<div class="alert alert-success">
+	<p><strong>Well done!</strong> You successfully read this important alert message.</p>
+</div>
+
+<div class="alert alert-info">
+	<p><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</p>
+</div>
+
+<div class="alert alert-warning">
+	<p><strong>Warning!</strong> Best check yo self, you're not looking too good.</p>
+</div>
+
+<div class="alert alert-danger">
+	<p><strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+</div>
+
+*/
+.alert {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 3.33333px;
+  padding: 16; }
+
+.alert-success {
+  background-color: #5cb85c; }
+  .alert-success > p {
+    color: #255625; }
+
+.alert-info {
+  background-color: #5bc0de; }
+  .alert-info > p {
+    color: #1b6d85; }
+
+.alert-warning {
+  background-color: #f0ad4e; }
+  .alert-warning > p {
+    color: #985f0d; }
+
+.alert-danger {
+  background-color: #d9534f; }
+  .alert-danger > p {
+    color: #761c19; }
+
+/*
+
+Horizontal rules
+==============
+
+<hr class="rule">
+<hr class="rule rule--dotted">
+<hr class="rule rule--dashed">
+<hr class="rule rule--ornament">
+
+*/
+.rule {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  color: pink; }
+
+.rule--dotted {
+  border-bottom-style: dotted; }
+
+.rule--dashed {
+  border-bottom-style: dashed; }
+
+.rule--ornament {
+  position: relative; }
+  .rule--ornament:after {
+    content: "\00A7";
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center; }
+  .rule--ornament[data-ornament]:after {
+    content: attr(data-ornament); }
+
+.jumbotron {
+  padding: 1.875rem;
+  margin-bottom: 1.875rem;
+  color: white;
+  background-color: #ca6253;
+  border-top: 10px solid rgba(120, 48, 37, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.25); }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    color: inherit;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .jumbotron p {
+    margin-bottom: 0.9375rem;
+    font-weight: 300;
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem; }
+    .jumbotron p:last-child {
+      margin-bottom: 0; }
+  .wrapper .jumbotron {
+    border-radius: 0 0 7.5px 7.5px; }
+  .jumbotron .wrapper {
+    max-width: 100%; }
+  @media only screen and (min-width: 769px) {
+    .jumbotron {
+      padding-top: 3rem;
+      padding-bottom: 3rem; }
+      .container .jumbotron {
+        padding-left: 3.75rem;
+        padding-right: 3.75rem; }
+      .jumbotron h1,
+      .jumbotron .h1 {
+        font-size: 4.5rem; } }
+
+/*
+
+Labels
+==============
+
+<h3>Example heading <span class="label label-default">New</span></h3>
+
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+
+*/
+.label {
+  border-radius: 3.33333px;
+  color: #FFF;
+  display: inline;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  padding: .2em .6em .3em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap; }
+
+.label-default {
+  background-color: #d0c3b0; }
+
+.label-primary {
+  background-color: #ca6253; }
+
+.label-success {
+  background-color: #5cb85c; }
+
+.label-info {
+  background-color: #5bc0de; }
+
+.label-warning {
+  background-color: #f0ad4e; }
+
+.label-danger {
+  background-color: #d9534f; }
+
+.panel {
+  border-radius: 5px;
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.25); }
+  .panel-group .panel {
+    border: 1px solid #dddddd;
+    margin-bottom: 0;
+    margin-top: 5px; }
+    .panel-group .panel:first-child {
+      margin-top: 0; }
+  .panel__heading {
+    padding: 0.75rem;
+    background-color: #dddddd;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    color: white; }
+    .panel__heading h2 {
+      color: inherit;
+      font-weight: normal;
+      margin: 0;
+      text-transform: uppercase; }
+    .panel__heading > .dropdown .dropdown-toggle {
+      color: inherit; }
+    .panel__heading p {
+      color: #999999;
+      margin-bottom: 0; }
+    .panel-group .panel__heading h4 {
+      margin-bottom: 0; }
+  .panel__body {
+    padding: 0.75rem;
+    background-color: white;
+    color: #333333;
+    clear: both; }
+  .panel__footer {
+    padding: 0.75rem;
+    background-color: #3d3d3d;
+    border-top: 1px solid #dddddd; }
+    .panel__footer ul.labels {
+      margin-bottom: 0; }
+  .panel .sub-section {
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dddddd; }
+
+.panel > .list-group {
+  margin-bottom: 0; }
+  .panel > .list-group .list-group-item {
+    border-width: 1px 0;
+    border-radius: 0; }
+  .panel > .list-group:first-child .list-group-item:first-child {
+    border-top: 0;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px; }
+  .panel > .list-group:last-child .list-group-item:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px; }
+
+.panel-heading + .list-group .list-group-item:first-child {
+  border-top-width: 0; }
+
+.panel > .table,
+.panel > .table-responsive > .table {
+  margin-bottom: 0; }
+.panel > .table:first-child,
+.panel > .table-responsive:first-child > .table:first-child {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px; }
+  .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+  .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+  .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+  .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+  .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+  .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+    border-top-left-radius: 4px; }
+  .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+  .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+  .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+  .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+  .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+  .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+  .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+    border-top-right-radius: 4px; }
+.panel > .table:last-child,
+.panel > .table-responsive:last-child > .table:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px; }
+  .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+  .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+  .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+  .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+  .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+  .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+    border-bottom-left-radius: 4px; }
+  .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+  .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+  .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+  .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+  .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+  .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+  .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+    border-bottom-right-radius: 4px; }
+.panel > .panel-body + .table,
+.panel > .panel-body + .table-responsive {
+  border-top: 1px solid #dddddd; }
+.panel > .table > tbody:first-child > tr:first-child th,
+.panel > .table > tbody:first-child > tr:first-child td {
+  border-top: 0; }
+.panel > .table-border-colored,
+.panel > .table-responsive > .table-border-colored {
+  border: 0; }
+  .panel > .table-border-colored > thead > tr > th:first-child,
+  .panel > .table-border-colored > thead > tr > td:first-child,
+  .panel > .table-border-colored > tbody > tr > th:first-child,
+  .panel > .table-border-colored > tbody > tr > td:first-child,
+  .panel > .table-border-colored > tfoot > tr > th:first-child,
+  .panel > .table-border-colored > tfoot > tr > td:first-child,
+  .panel > .table-responsive > .table-border-colored > thead > tr > th:first-child,
+  .panel > .table-responsive > .table-border-colored > thead > tr > td:first-child,
+  .panel > .table-responsive > .table-border-colored > tbody > tr > th:first-child,
+  .panel > .table-responsive > .table-border-colored > tbody > tr > td:first-child,
+  .panel > .table-responsive > .table-border-colored > tfoot > tr > th:first-child,
+  .panel > .table-responsive > .table-border-colored > tfoot > tr > td:first-child {
+    border-left: 0; }
+  .panel > .table-border-colored > thead > tr > th:last-child,
+  .panel > .table-border-colored > thead > tr > td:last-child,
+  .panel > .table-border-colored > tbody > tr > th:last-child,
+  .panel > .table-border-colored > tbody > tr > td:last-child,
+  .panel > .table-border-colored > tfoot > tr > th:last-child,
+  .panel > .table-border-colored > tfoot > tr > td:last-child,
+  .panel > .table-responsive > .table-border-colored > thead > tr > th:last-child,
+  .panel > .table-responsive > .table-border-colored > thead > tr > td:last-child,
+  .panel > .table-responsive > .table-border-colored > tbody > tr > th:last-child,
+  .panel > .table-responsive > .table-border-colored > tbody > tr > td:last-child,
+  .panel > .table-responsive > .table-border-colored > tfoot > tr > th:last-child,
+  .panel > .table-responsive > .table-border-colored > tfoot > tr > td:last-child {
+    border-right: 0; }
+  .panel > .table-border-colored > thead > tr:first-child > td,
+  .panel > .table-border-colored > thead > tr:first-child > th,
+  .panel > .table-border-colored > tbody > tr:first-child > td,
+  .panel > .table-border-colored > tbody > tr:first-child > th,
+  .panel > .table-responsive > .table-border-colored > thead > tr:first-child > td,
+  .panel > .table-responsive > .table-border-colored > thead > tr:first-child > th,
+  .panel > .table-responsive > .table-border-colored > tbody > tr:first-child > td,
+  .panel > .table-responsive > .table-border-colored > tbody > tr:first-child > th {
+    border-bottom: 0; }
+  .panel > .table-border-colored > tbody > tr:last-child > td,
+  .panel > .table-border-colored > tbody > tr:last-child > th,
+  .panel > .table-border-colored > tfoot > tr:last-child > td,
+  .panel > .table-border-colored > tfoot > tr:last-child > th,
+  .panel > .table-responsive > .table-border-colored > tbody > tr:last-child > td,
+  .panel > .table-responsive > .table-border-colored > tbody > tr:last-child > th,
+  .panel > .table-responsive > .table-border-colored > tfoot > tr:last-child > td,
+  .panel > .table-responsive > .table-border-colored > tfoot > tr:last-child > th {
+    border-bottom: 0; }
+.panel > .table-responsive {
+  border: 0;
+  margin-bottom: 0; }
+
+.panel-group {
+  margin-bottom: 24; }
+  .panel-group__panel {
+    margin-bottom: 0;
+    border-radius: 5px;
+    overflow: hidden; }
+    .panel-group__panel + .panel-group__panel {
+      margin-top: 5px; }
+    .panel-group__panel.panel-body {
+      border-top: 1px solid #dddddd; }
+    .panel-group__panel.panel-heading {
+      border-bottom: 0; }
+      .panel-group__panel.panel-heading + .panel-collapse .panel-body {
+        border-top: 1px solid #dddddd; }
+    .panel-group__panel.panel-footer {
+      border-top: 0; }
+      .panel-group__panel.panel-footer + .panel-collapse .panel-body {
+        border-bottom: 1px solid #dddddd; }
+
+.panel-default {
+  border-color: #dddddd; }
+  .panel-default > .panel-heading {
+    color: #333333;
+    background-color: #dddddd;
+    border-color: #dddddd; }
+    .panel-default > .panel-heading + .panel-collapse .panel-body {
+      border-top-color: #dddddd; }
+  .panel-default > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #dddddd; }
+
+.panel-primary {
+  border-color: #ca6253; }
+  .panel-primary > .panel-heading {
+    color: white;
+    background-color: #ca6253;
+    border-color: #ca6253; }
+    .panel-primary > .panel-heading + .panel-collapse .panel-body {
+      border-top-color: #ca6253; }
+  .panel-primary > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #ca6253; }
+
+.panel-success {
+  border-color: #5cae4c; }
+  .panel-success > .panel-heading {
+    color: #3c763d;
+    background-color: #5cb85c;
+    border-color: #5cae4c; }
+    .panel-success > .panel-heading + .panel-collapse .panel-body {
+      border-top-color: #5cae4c; }
+  .panel-success > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #5cae4c; }
+
+.panel-info {
+  border-color: #3dced8; }
+  .panel-info > .panel-heading {
+    color: #31708f;
+    background-color: #5bc0de;
+    border-color: #3dced8; }
+    .panel-info > .panel-heading + .panel-collapse .panel-body {
+      border-top-color: #3dced8; }
+  .panel-info > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #3dced8; }
+
+.panel-warning {
+  border-color: #ee8436; }
+  .panel-warning > .panel-heading {
+    color: #8a6d3b;
+    background-color: #f0ad4e;
+    border-color: #ee8436; }
+    .panel-warning > .panel-heading + .panel-collapse .panel-body {
+      border-top-color: #ee8436; }
+  .panel-warning > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #ee8436; }
+
+.panel-danger {
+  border-color: #d43a4f; }
+  .panel-danger > .panel-heading {
+    color: #a94442;
+    background-color: #d9534f;
+    border-color: #d43a4f; }
+    .panel-danger > .panel-heading + .panel-collapse .panel-body {
+      border-top-color: #d43a4f; }
+  .panel-danger > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #d43a4f; }
+
+/*
+
+Wells
+==============
+
+<div class="well">
+	<p>This is a well</p>
+</div>
+
+*/
+.well {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3.33333px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 16; }
+
+/*
+
+Colors
+==============
+
+Styles for the tables
+
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+*/
+/*
+
+Media object
+==============
+
+<div class="media">
+	<a class="" href="">
+		<img class="media-object" src="" alt="">
+	</a>
+	<div class="media-body">
+		<h4 class="media-heading"></h4>
+		<p></p>
+	</div>
+</div>
+
+*/
+/*
+
+Buttons
+==============
+
+Copyright 2013 Harry Roberts
+
+*/
+/*
+
+Big Form
+==============
+
+<form action="/">
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" id="name" class="form-text" />
+		<p class="form-help">This is help text under the form field.</p>
+		<label for="email">Email</label>
+		<input type="email" id="email" class="form-text" />
+	</fieldset>
+	<fieldset>
+		<label for="gender">Gender</label>
+		<select id="gender">
+			<option>Male</option>
+			<option>Female</option>
+			<option>Cylon</option>
+		</select>
+	</fieldset>
+	<fieldset class="radio">
+		<label for="notifications">Notifications</label>
+		<ul>
+			<li><label><input type="radio" name="notifications" /> Send me email</label></li>
+			<li><label><input type="radio" name="notifications" /> Don't send me email</label></li>
+			<li><label><input type="radio" name="notifications" /> Send me flowers</label></li>
+		</ul>
+	</fieldset>
+	<fieldset>
+		<label for="url">URL</label>
+		<input type="url" id="url" class="form-text" placeholder="http://yourdomain.com" />
+	</fieldset>
+	<fieldset>
+		<label for="bio">Bio</label>
+		<textarea id="bio"></textarea>
+	</fieldset>
+	<fieldset class="check">
+		<label><input type="checkbox" /> I accept the terms of service and lorem ipsum.</label>
+	</fieldset>
+	<fieldset class="form-actions">
+		<button type="submit">Submit</button>
+	</fieldset>
+</form>
+
+*/
+/*
+
+Search Forms
+============
+
+	<form action="/" class="search">
+		<fieldset>
+			<input type="text" placeholder="Search" />
+			<button type="submit">Go!</button>
+		</fieldset>
+	</form>
+
+*/
+/*
+
+Modules
+==============
+
+Put your 'modules' here
+
+*/
+/*
+
+Widgets
+==============
+
+Put your 'widgets' here
+
+*/
+/*
+
+Specimen
+============
+
+*/
+body.specimen aside {
+  clear: both;
+  background: #3d3d3d; }
+  @media only screen and (min-width: 990px) {
+    body.specimen aside {
+      display: block;
+      float: left;
+      margin-left: 0;
+      margin-right: -100%;
+      width: 23.5%; } }
+@media only screen and (min-width: 990px) {
+  body.specimen main {
+    clear: both;
+    clear: both;
+    display: block;
+    float: left;
+    margin-left: 0;
+    width: 100%; } }
+body.specimen article.block {
+  clear: both;
+  display: block;
+  float: left;
+  margin-left: 0;
+  width: 100%; }
+  @media only screen and (min-width: 990px) {
+    body.specimen article.block:nth-of-type(2n+1) {
+      display: block;
+      float: left;
+      margin-left: 0;
+      margin-right: -100%;
+      width: 49%; }
+    body.specimen article.block:nth-of-type(2n+2) {
+      clear: none;
+      display: block;
+      float: left;
+      margin-left: 51%;
+      margin-right: -100%;
+      width: 49%; } }
+
+/*
+
+Scratch
+==============
+
+This is for code to exist before it's re-factored put in it's place
+
+*/
+/*
+
+Scratch
+==============
+
+This is not a dumping ground. It is a staging area for hacks that are
+intended to be fixed and resolved so as not to sully our
+production-ready codebase. Hacks are necessary, but they are not
+permanent, nor are they acceptable long-term. You are not done when
+you've moved your selector and rules here.
+
+This is not intended to be an easy fix, or a simple way out. You will
+spend time writing out your shame, and you will make it known that
+you indeed had to resort to a hack with your next commit
+
+Rules:
+	1) Your documentation should be written in block comment format so
+	that your shame is publically visible in the compiled stylesheet
+	(also helpful for debugging)
+
+	2) Name yourself so we can all scorn your lack of front-end prowess
+	(or talk to you about any questions we have)
+
+	3) Name the location your code would go were it not such a horrible
+	travesty to the name of stylesheet.
+
+	4) Give the motive behind your sociopathic manipulation of CSS, what
+	areas are affected, what this solves, and most importantly...
+
+	5) How would you go about rectifying the horrible crimes you have
+	committed given more time.
+
+*/
+/*
+
+Print
+============
+
+*/
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/* endif */
+
+

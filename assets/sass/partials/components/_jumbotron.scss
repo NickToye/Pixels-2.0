@@ -1,0 +1,50 @@
+.jumbotron {
+	@include clear;
+	padding: $jumbotron-padding;
+	margin-bottom: $jumbotron-padding;
+	color: $jumbotron-color;
+	background-color: $jumbotron-background-color;
+	border: {
+		top: 10px solid rgba(darken($brand-primary,25%),.4);
+		bottom: 1px solid rgba($white, .1);
+	}
+	@include box-shadow(1px 0 5px rgba(0,0,0,.25));
+	h1,
+	.h1 {
+		color: $jumbotron-heading-color;
+		font-weight: $bold;
+		text-transform: uppercase;
+	}
+	p {
+		margin-bottom: ($jumbotron-padding / 2);
+		font: {
+			weight: $light;
+		}
+		@include font-size($jumbotron-font-size,false,true);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.wrapper & {
+		border-radius: 0 0 $border-radius-large $border-radius-large;  // Only round corners at higher resolutions if contained in a .wrapper
+	}
+	.wrapper {
+		max-width: 100%;
+	}
+	@include gs-media(t,min) {
+		padding: {
+			top:  ($jumbotron-padding * 1.6);
+			bottom:  ($jumbotron-padding * 1.6);
+		}
+		.container & {
+			padding: {
+				left:  ($jumbotron-padding * 2);
+				right: ($jumbotron-padding * 2);
+			}
+		}
+		h1,
+		.h1 {
+			font-size: rem(($base-font-size * 4.5));
+			}
+		}
+}
